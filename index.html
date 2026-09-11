@@ -1,499 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shaik Afrin | AI & Data Analyst Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    :root {
-      --bg: #0a0a0f;
-      --bg2: #111118;
-      --bg3: #1a1a24;
-      --accent: #7c3aed;
-      --accent2: #06b6d4;
-      --grad: linear-gradient(135deg, #7c3aed, #06b6d4);
-      --text: #e2e8f0;
-      --muted: #94a3b8;
-      --border: rgba(124,58,237,0.2);
-      --card: rgba(26,26,36,0.8);
+    <!-- Primary SEO -->
+    <title>Afrin Shaik | Microsoft Dynamics 365 CRM Developer</title>
+    <meta name="description" content="Portfolio of Afrin Shaik, a Microsoft Dynamics 365 CRM Developer specializing in Dataverse, plug-ins, JavaScript, integrations, automation and CRM customization. Based in Hyderabad, India." />
+    <meta name="keywords" content="Afrin Shaik, Microsoft Dynamics 365, CRM Developer, Dataverse, Plug-ins, Power Apps, Power Automate, JavaScript, C#, .NET, Hyderabad" />
+    <meta name="author" content="Afrin Shaik" />
+    <link rel="canonical" href="https://afrin-portfolio-omega.vercel.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://afrin-portfolio-omega.vercel.app/" />
+    <meta property="og:title" content="Afrin Shaik | Microsoft Dynamics 365 CRM Developer" />
+    <meta property="og:description" content="Portfolio of Afrin Shaik, Microsoft Dynamics 365 CRM Developer specializing in Dataverse, plug-ins, automation and CRM customization." />
+    <meta property="og:image" content="https://afrin-portfolio-omega.vercel.app/og-image.png" />
+    <meta property="og:site_name" content="Afrin Shaik Portfolio" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Afrin Shaik | Microsoft Dynamics 365 CRM Developer" />
+    <meta name="twitter:description" content="Portfolio of Afrin Shaik, Microsoft Dynamics 365 CRM Developer." />
+    <meta name="twitter:image" content="https://afrin-portfolio-omega.vercel.app/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Afrin Shaik",
+      "jobTitle": "Microsoft Dynamics 365 CRM Developer",
+      "description": "Microsoft Dynamics 365 CRM Developer with 2+ years of experience in Dataverse, plug-ins, JavaScript, Power Automate and CRM customization.",
+      "url": "https://afrin-portfolio-omega.vercel.app/",
+      "email": "afrinshaik847@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hyderabad",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/afrin-shaik-crm",
+        "https://github.com/jahangeershaik997-dev/afrin-portfolio"
+      ],
+      "knowsAbout": [
+        "Microsoft Dynamics 365 CRM",
+        "Microsoft Dataverse",
+        "C# .NET",
+        "JavaScript",
+        "Power Apps",
+        "Power Automate",
+        "CRM Customization",
+        "Plug-in Development"
+      ]
     }
+    </script>
 
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* NAV */
-    nav {
-      position: fixed; top: 0; width: 100%; z-index: 100;
-      background: rgba(10,10,15,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 1rem 2rem;
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    .nav-logo {
-      font-weight: 800; font-size: 1.2rem;
-      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-    .nav-links a:hover { color: white; }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex; align-items: center; justify-content: center;
-      text-align: center;
-      padding: 6rem 2rem 4rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; top: -50%; left: 50%; transform: translateX(-50%);
-      width: 800px; height: 800px;
-      background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(124,58,237,0.15);
-      border: 1px solid rgba(124,58,237,0.4);
-      color: #a78bfa;
-      padding: 0.4rem 1rem; border-radius: 999px;
-      font-size: 0.85rem; font-weight: 500;
-      margin-bottom: 1.5rem;
-    }
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 800; line-height: 1.1;
-      margin-bottom: 0.5rem;
-    }
-    .hero h1 span {
-      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .hero-sub {
-      font-size: 1.2rem; color: var(--muted);
-      margin-bottom: 0.75rem; font-weight: 400;
-    }
-    .hero-location { color: var(--muted); font-size: 0.9rem; margin-bottom: 2rem; }
-    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
-    .btn {
-      padding: 0.75rem 1.75rem; border-radius: 8px;
-      font-weight: 600; font-size: 0.95rem;
-      text-decoration: none; transition: all 0.2s; cursor: pointer; border: none;
-    }
-    .btn-primary { background: var(--grad); color: white; }
-    .btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
-    .btn-outline {
-      background: transparent; color: var(--text);
-      border: 1px solid var(--border);
-    }
-    .btn-outline:hover { border-color: var(--accent); color: white; transform: translateY(-1px); }
-
-    .hero-tags { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
-    .tag {
-      background: var(--bg3); border: 1px solid var(--border);
-      padding: 0.35rem 0.85rem; border-radius: 999px;
-      font-size: 0.8rem; color: var(--muted);
-    }
-
-    /* SECTIONS */
-    section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
-    .section-label {
-      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em;
-      text-transform: uppercase; color: var(--accent2);
-      margin-bottom: 0.5rem;
-    }
-    .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800;
-      margin-bottom: 1rem;
-    }
-    .section-title span { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .section-desc { color: var(--muted); max-width: 600px; margin-bottom: 3rem; }
-
-    /* ABOUT */
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
-    .about-text p { color: var(--muted); margin-bottom: 1rem; }
-    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .stat-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 12px; padding: 1.25rem; text-align: center;
-    }
-    .stat-number { font-size: 2rem; font-weight: 800; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
-
-    /* SKILLS */
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
-    .skill-category {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 16px; padding: 1.5rem;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .skill-category:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .skill-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
-    .skill-category h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .skill-tag {
-      background: rgba(124,58,237,0.1); border: 1px solid rgba(124,58,237,0.2);
-      color: #a78bfa; padding: 0.25rem 0.65rem; border-radius: 6px; font-size: 0.78rem;
-    }
-
-    /* EXPERIENCE */
-    .timeline { position: relative; }
-    .timeline::before {
-      content: ''; position: absolute; left: 20px; top: 0; bottom: 0;
-      width: 2px; background: var(--border);
-    }
-    .timeline-item { padding-left: 60px; margin-bottom: 2.5rem; position: relative; }
-    .timeline-dot {
-      position: absolute; left: 12px; top: 6px;
-      width: 18px; height: 18px; border-radius: 50%;
-      background: var(--grad); border: 3px solid var(--bg);
-    }
-    .timeline-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 14px; padding: 1.5rem;
-      transition: border-color 0.2s;
-    }
-    .timeline-card:hover { border-color: var(--accent); }
-    .timeline-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; }
-    .timeline-title { font-weight: 700; font-size: 1rem; }
-    .timeline-company { color: var(--accent2); font-size: 0.9rem; font-weight: 500; }
-    .timeline-date {
-      background: rgba(6,182,212,0.1); border: 1px solid rgba(6,182,212,0.2);
-      color: var(--accent2); padding: 0.2rem 0.65rem; border-radius: 999px; font-size: 0.75rem;
-    }
-    .timeline-desc { color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem; }
-    .timeline-desc li { margin-bottom: 0.3rem; list-style: none; padding-left: 1.2rem; position: relative; }
-    .timeline-desc li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
-
-    /* EDUCATION */
-    .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-    .edu-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 16px; padding: 1.5rem;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .edu-card:hover { border-color: var(--accent2); transform: translateY(-2px); }
-    .edu-icon { font-size: 2rem; margin-bottom: 0.75rem; }
-    .edu-degree { font-weight: 700; font-size: 1rem; margin-bottom: 0.3rem; }
-    .edu-school { color: var(--accent2); font-size: 0.9rem; margin-bottom: 0.25rem; }
-    .edu-year { color: var(--muted); font-size: 0.8rem; }
-
-    /* CONTACT */
-    .contact-wrapper {
-      background: var(--bg3); border: 1px solid var(--border);
-      border-radius: 20px; padding: 3rem;
-      text-align: center; position: relative; overflow: hidden;
-    }
-    .contact-wrapper::before {
-      content: '';
-      position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(124,58,237,0.1) 0%, transparent 70%);
-    }
-    .contact-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
-    .contact-link {
-      display: flex; align-items: center; gap: 0.5rem;
-      background: var(--bg2); border: 1px solid var(--border);
-      color: var(--text); text-decoration: none;
-      padding: 0.75rem 1.5rem; border-radius: 10px;
-      font-size: 0.9rem; font-weight: 500;
-      transition: all 0.2s;
-    }
-    .contact-link:hover { border-color: var(--accent); transform: translateY(-2px); }
-
-    /* FOOTER */
-    footer {
-      text-align: center; padding: 2rem;
-      border-top: 1px solid var(--border);
-      color: var(--muted); font-size: 0.85rem;
-    }
-
-    /* DIVIDER */
-    .full-width { max-width: 100%; padding: 0; }
-    hr.divider { border: none; border-top: 1px solid var(--border); margin: 0 2rem; }
-
-    @media (max-width: 768px) {
-      .about-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-      .timeline::before { left: 10px; }
-      .timeline-item { padding-left: 40px; }
-      .timeline-dot { left: 2px; }
-    }
-  </style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">Afrin Shaik</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero full-width" style="max-width:100%">
-  <div>
-    <div class="hero-badge">🟢 Open to Work</div>
-    <h1>Hi, I'm <span>Shaik Afrin</span></h1>
-    <p class="hero-sub">MBA Business Analytics Student · AI & Data Analyst Fresher</p>
-    <p class="hero-location">📍 Hyderabad, Telangana, India</p>
-    <div class="hero-btns">
-      <a href="mailto:afrinshaik847@gmail.com" class="btn btn-primary">Hire Me</a>
-      <a href="#experience" class="btn btn-outline">View Experience</a>
-    </div>
-    <div class="hero-tags">
-      <span class="tag">AI Prompt Associate</span>
-      <span class="tag">Data Analyst Trainee</span>
-      <span class="tag">Business Analyst Intern</span>
-      <span class="tag">AI Data Annotation</span>
-      <span class="tag">AI Operations</span>
-    </div>
-  </div>
-</section>
-
-<hr class="divider" />
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-label">Who I Am</div>
-  <div class="section-title">Turning <span>Data Into Decisions</span></div>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>I'm an MBA Business Analytics student at Vignan University with a Computer Science background. I bring a rare combination of real banking operations experience, AI/ML internship exposure, and a strong analytics foundation.</p>
-      <p>I've worked with live financial data under strict compliance requirements, built ML models, and developed skills in AI prompt writing and response evaluation — all before completing my MBA.</p>
-      <p>I'm passionate about turning raw data into meaningful insights that drive smarter decisions. Ready to contribute from day one.</p>
-      <a href="mailto:afrinshaik847@gmail.com" class="btn btn-primary" style="display:inline-block; margin-top:1rem">Get In Touch →</a>
-    </div>
-    <div class="about-stats">
-      <div class="stat-card">
-        <div class="stat-number">99%+</div>
-        <div class="stat-label">Transaction Accuracy</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">3</div>
-        <div class="stat-label">Internships Completed</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">6mo</div>
-        <div class="stat-label">Banking Experience</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">MBA</div>
-        <div class="stat-label">Business Analytics</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider" />
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="section-label">What I Know</div>
-  <div class="section-title">Skills & <span>Expertise</span></div>
-  <p class="section-desc">A cross-domain skill set built through real work, internships, and academic training.</p>
-  <div class="skills-grid">
-    <div class="skill-category">
-      <div class="skill-icon">🤖</div>
-      <h3>AI & Machine Learning</h3>
-      <div class="skill-tags">
-        <span class="skill-tag">Prompt Writing</span>
-        <span class="skill-tag">AI Response Evaluation</span>
-        <span class="skill-tag">Data Annotation</span>
-        <span class="skill-tag">ML Model Basics</span>
-        <span class="skill-tag">AI Workflows</span>
-      </div>
-    </div>
-    <div class="skill-category">
-      <div class="skill-icon">📊</div>
-      <h3>Data & Analytics</h3>
-      <div class="skill-tags">
-        <span class="skill-tag">Excel</span>
-        <span class="skill-tag">SQL Basics</span>
-        <span class="skill-tag">Data Cleaning</span>
-        <span class="skill-tag">Reconciliation</span>
-        <span class="skill-tag">Reporting</span>
-        <span class="skill-tag">Data Validation</span>
-      </div>
-    </div>
-    <div class="skill-category">
-      <div class="skill-icon">🏦</div>
-      <h3>Banking & Operations</h3>
-      <div class="skill-tags">
-        <span class="skill-tag">Banking Operations</span>
-        <span class="skill-tag">Compliance</span>
-        <span class="skill-tag">SLA Management</span>
-        <span class="skill-tag">Documentation</span>
-        <span class="skill-tag">Financial Transactions</span>
-      </div>
-    </div>
-    <div class="skill-category">
-      <div class="skill-icon">💻</div>
-      <h3>Technical Skills</h3>
-      <div class="skill-tags">
-        <span class="skill-tag">MS Office</span>
-        <span class="skill-tag">HTML</span>
-        <span class="skill-tag">Cybersecurity Basics</span>
-        <span class="skill-tag">Data Protection</span>
-        <span class="skill-tag">Business Analysis</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider" />
-
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="section-label">What I've Done</div>
-  <div class="section-title">Experience & <span>Internships</span></div>
-  <p class="section-desc">Real-world exposure across banking, AI/ML, cybersecurity, and professional development.</p>
-  <div class="timeline">
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <div class="timeline-header">
-          <div>
-            <div class="timeline-title">Process Associate (Contract)</div>
-            <div class="timeline-company">Canadian Banking Client · Contract Role</div>
-          </div>
-          <span class="timeline-date">Oct 2024 – Mar 2025</span>
-        </div>
-        <ul class="timeline-desc">
-          <li>Processed and validated financial transactions with 99%+ accuracy under strict SLA timelines</li>
-          <li>Performed data cleaning, reconciliation, and Excel-based reporting</li>
-          <li>Maintained compliance with banking regulations, confidentiality, and documentation discipline</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <div class="timeline-header">
-          <div>
-            <div class="timeline-title">AI-ML Virtual Intern</div>
-            <div class="timeline-company">EduSkills Academy</div>
-          </div>
-          <span class="timeline-date">Jan – Mar 2024</span>
-        </div>
-        <ul class="timeline-desc">
-          <li>Built basic machine learning models and explored AI-based solution workflows</li>
-          <li>Developed understanding of AI system design, evaluation, and prompt engineering</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <div class="timeline-header">
-          <div>
-            <div class="timeline-title">Cybersecurity Virtual Intern</div>
-            <div class="timeline-company">EduSkills Academy</div>
-          </div>
-          <span class="timeline-date">Sep – Nov 2023</span>
-        </div>
-        <ul class="timeline-desc">
-          <li>Learned network security fundamentals and data protection concepts</li>
-          <li>Applied safe handling of information across digital environments</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <div class="timeline-header">
-          <div>
-            <div class="timeline-title">Employability Skills Intern</div>
-            <div class="timeline-company">Bapaiah Technologies</div>
-          </div>
-          <span class="timeline-date">Jul – Sep 2023</span>
-        </div>
-        <ul class="timeline-desc">
-          <li>Improved workplace communication, task ownership, and project coordination skills</li>
-          <li>Collected and analyzed community-level data; presented practical observations</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<hr class="divider" />
-
-<!-- EDUCATION -->
-<section id="education">
-  <div class="section-label">My Background</div>
-  <div class="section-title">Education & <span>Certifications</span></div>
-  <div class="edu-grid">
-    <div class="edu-card">
-      <div class="edu-icon">🎓</div>
-      <div class="edu-degree">MBA – Business Analytics</div>
-      <div class="edu-school">Vignan's Foundation for Science, Technology & Research</div>
-      <div class="edu-year">2024 – 2026 · Currently Pursuing</div>
-    </div>
-    <div class="edu-card">
-      <div class="edu-icon">💻</div>
-      <div class="edu-degree">Bachelor of Computer Science</div>
-      <div class="edu-school">ASN Degree College</div>
-      <div class="edu-year">2021 – 2024 · Completed</div>
-    </div>
-    <div class="edu-card">
-      <div class="edu-icon">📜</div>
-      <div class="edu-degree">Business Analysis & Project Management</div>
-      <div class="edu-school">Coursera Certification</div>
-      <div class="edu-year">Certified</div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider" />
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-wrapper">
-    <div class="section-label" style="margin-bottom:0.5rem">Let's Connect</div>
-    <h2 class="section-title" style="margin-bottom:1rem">Open to <span>Opportunities</span></h2>
-    <p style="color:var(--muted); max-width:500px; margin:0 auto">
-      I'm actively looking for AI, Data Analyst, and Business Analyst roles across India. Remote, hybrid, or on-site — let's talk!
-    </p>
-    <div class="contact-links">
-      <a href="mailto:afrinshaik847@gmail.com" class="contact-link">
-        <span>✉️</span> afrinshaik847@gmail.com
-      </a>
-      <a href="https://www.linkedin.com/in/afrin-shaik-42550b279" target="_blank" class="contact-link">
-        <span>💼</span> linkedin.com/in/afrin-shaik
-      </a>
-      <a href="tel:+919381742436" class="contact-link">
-        <span>📞</span> +91 9381742436
-      </a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p>Built with ❤️ · Shaik Afrin © 2026 · Hyderabad, India · Open to Work</p>
-</footer>
-
-</body>
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
