@@ -5,7 +5,7 @@ export const profile = {
   title: 'Microsoft Dynamics 365 CRM Developer',
   tagline: 'Building smarter CRM experiences with Dynamics 365.',
   summary:
-    'Microsoft Dynamics 365 CRM Developer with 2+ years of experience specializing in Dataverse, plug-in development, JavaScript customizations, Power Automate, and enterprise CRM solutions.',
+    "I'm a Microsoft Dynamics 365 CRM Developer with 2+ years of experience specializing in Dataverse, plug-in development, JavaScript customizations, Power Automate, and enterprise CRM solutions.",
   location: 'Hyderabad, India',
   email: 'afrinshaik847@gmail.com',
   phone: '9381742436',
@@ -24,7 +24,7 @@ export const experience = [
     project: 'Hospital Management System',
     environment: ['Microsoft Dynamics 365 CRM', 'Dataverse', 'Power Apps', 'Power Automate'],
     summary:
-      'Leading CRM development for a comprehensive Hospital Management System, covering patient lifecycle, billing, pharmacy, and lab operations on Microsoft Dataverse.',
+      "I'm currently leading CRM development for a comprehensive Hospital Management System, covering patient lifecycle, billing, pharmacy, and lab operations on Microsoft Dataverse.",
     categories: {
       customization: [
         'Configured Dataverse tables: Patients, Doctors, Appointments, Prescriptions, Billing, Pharmacy, Inventory, Lab Tests, Hospital Rooms & Beds',
@@ -60,7 +60,7 @@ export const experience = [
         teamSize: 10,
         environment: ['Microsoft Dynamics 365 CRM'],
         summary:
-          'Enterprise CRM customization for Unilever, including plug-in development, Web API integration, FetchXML reporting, Ribbon Workbench customization, and CRM administration.',
+          'I worked on enterprise CRM customization for Unilever, including plug-in development, Web API integration, FetchXML reporting, Ribbon Workbench customization, and CRM administration.',
         categories: {
           customization: [
             'CRM configuration: Entities, Forms, Views, Business Rules, Dashboards, Reports, Charts',
@@ -88,7 +88,7 @@ export const experience = [
         domain: 'School management and administration',
         environment: ['Microsoft Dynamics 365 CRM', 'C#', 'SQL Server'],
         summary:
-          'Full product development for a K-12 school management platform, including portal development, multi-location and multi-user support, and CRM customization.',
+          'I contributed to full product development for a K-12 school management platform, including portal development, multi-location and multi-user support, and CRM customization.',
         categories: {
           customization: [
             'Ribbon Workbench: Custom buttons, Enable Rules, Display Rules, Command Bar, Site Map, Menus',
@@ -117,7 +117,7 @@ export const projects = [
     company: 'APTSOL GLOBAL TECH PRIVATE LIMITED',
     type: 'CRM Platform',
     description:
-      'A comprehensive Hospital Management System built on Microsoft Dataverse and Dynamics 365 CRM, managing the complete patient lifecycle from registration to billing, pharmacy, and lab operations.',
+      "I'm currently working on a comprehensive Hospital Management System built on Microsoft Dataverse and Dynamics 365 CRM, managing the complete patient lifecycle from registration to billing, pharmacy, and lab operations.",
     modules: [
       'Patient Registration',
       'Doctor Scheduling',
@@ -144,7 +144,7 @@ export const projects = [
     company: 'Starlite Infotech',
     type: 'Enterprise CRM',
     description:
-      'Enterprise-grade CRM customization for Unilever, involving complex plug-in development, Web API integration, FetchXML reporting, Ribbon customizations, and comprehensive CRM administration.',
+      'I worked on enterprise-grade CRM customization for Unilever, involving complex plug-in development, Web API integration, FetchXML reporting, Ribbon customizations, and comprehensive CRM administration.',
     modules: [
       'Requirement Analysis',
       'CRM Customization',
@@ -168,7 +168,7 @@ export const projects = [
     company: 'Starlite Infotech',
     type: 'Product Development',
     description:
-      'Full product development for a K-12 school management platform on Dynamics 365 CRM, covering student/teacher management, attendance, fee tracking, portal development, and multi-location operations.',
+      'I contributed to full product development for a K-12 school management platform on Dynamics 365 CRM, covering student/teacher management, attendance, fee tracking, portal development, and multi-location operations.',
     modules: [
       'School Implementation',
       'Teacher Registration',

@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import { motion, useInView, type Variants } from 'framer-motion';
-import { profile } from '../data/portfolio';
 
 const highlights = [
   { value: '2+', label: 'YEARS', sub: 'DYNAMICS 365' },
@@ -102,22 +101,23 @@ export default function About() {
             </motion.h2>
 
             <motion.p variants={item} style={bodyText}>
-              {profile.name} is a Microsoft Dynamics 365 CRM Developer based in Hyderabad,
-              India with {profile.yearsExperience} years of hands-on experience building
+              I'm a Microsoft Dynamics 365 CRM Developer based in Hyderabad, India,
+              with 2+ years of hands-on experience designing, developing, and deploying
               enterprise CRM solutions on Microsoft Dynamics 365 and Dataverse.
             </motion.p>
 
             <motion.p variants={item} style={{ ...bodyText, marginTop: '1rem' }}>
-              Working across industries including healthcare and enterprise operations,
-              Afrin has delivered complex CRM customizations involving Dataverse table
-              design, C# / .NET plug-in development, JavaScript form automation,
-              Business Process Flows, and Power Automate integrations.
+              Working across domains like healthcare and enterprise operations,
+              I build end-to-end CRM solutions involving Dataverse table architecture,
+              C# / .NET plug-in development, JavaScript form automations, Web API integrations,
+              FetchXML reporting, and Power Automate workflows. I also configure Ribbon Workbench
+              commands, SQL Server stored procedures, and role-based CRM security.
             </motion.p>
 
             <motion.p variants={item} style={{ ...bodyText, marginTop: '1rem' }}>
-              Her approach combines deep technical knowledge of the Dynamics 365 platform
-              with a clear understanding of business requirements — translating complex
-              workflows into reliable, maintainable CRM solutions.
+              My approach combines strong technical expertise across the Dynamics 365 platform
+              with direct client interaction and requirements analysis — translating complex business
+              processes into robust, scalable, and maintainable CRM applications.
             </motion.p>
 
             {/* Highlights grid */}

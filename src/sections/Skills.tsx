@@ -193,7 +193,7 @@ function LifecycleSection({ isInView }: { isInView: boolean }) {
         transition={{ delay: 0.7 }}
         style={{ color: '#9B9BB4', fontSize: '0.9rem', marginBottom: '2.5rem' }}
       >
-        End-to-end delivery of Microsoft Dynamics 365 CRM solutions.
+        How I deliver end-to-end Microsoft Dynamics 365 CRM solutions.
       </motion.p>
 
       <div

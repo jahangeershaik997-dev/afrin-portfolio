@@ -84,7 +84,7 @@ export default function Resume() {
           transition={{ delay: 0.2 }}
           style={{ fontSize: '1rem', color: '#9B9BB4', marginBottom: '3.5rem', maxWidth: '520px' }}
         >
-          Download or view the full resume for a complete picture of Afrin's Dynamics 365 CRM experience, projects, and skills.
+          Download or view my full resume for a complete overview of my Dynamics 365 CRM experience, projects, and technical skills.
         </motion.p>
 
         <div
@@ -156,7 +156,7 @@ export default function Resume() {
                       href={PDF_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label="View Afrin Shaik's resume PDF in a new tab"
+                      aria-label="View my resume PDF in a new tab"
                       style={primaryCTA}
                     >
                       <ExternalLink size={15} aria-hidden="true" />
@@ -166,7 +166,7 @@ export default function Resume() {
                   <a
                     href={DOCX_URL}
                     download="Afrin_Shaik_Resume.docx"
-                    aria-label="Download Afrin Shaik's resume as a Word document"
+                    aria-label="Download my resume as a Word document"
                     style={HAS_PDF ? outlineCTA : primaryCTA}
                   >
                     <Download size={15} aria-hidden="true" />

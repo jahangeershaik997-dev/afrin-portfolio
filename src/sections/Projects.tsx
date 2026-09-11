@@ -277,7 +277,7 @@ export default function Projects() {
             lineHeight: 1.15,
           }}
         >
-          CRM projects delivered
+          CRM projects I've delivered
         </motion.h2>
 
         <motion.p
@@ -286,7 +286,7 @@ export default function Projects() {
           transition={{ duration: 0.6, delay: 0.2 }}
           style={{ fontSize: '1rem', color: '#9B9BB4', marginBottom: '3.5rem', maxWidth: '500px' }}
         >
-          Enterprise-grade solutions built on Microsoft Dynamics 365 CRM and Dataverse.
+          Enterprise-grade solutions I've built on Microsoft Dynamics 365 CRM and Dataverse.
         </motion.p>
 
         <div

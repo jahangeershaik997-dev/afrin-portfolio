@@ -190,10 +190,10 @@ export default function Hero() {
             color: '#5C5C7A',
             lineHeight: 1.7,
             maxWidth: '540px',
-            marginBottom: '2rem',
+            marginBottom: '1rem',
           }}
         >
-          {profile.tagline}
+          I'm Afrin Shaik, a Microsoft Dynamics 365 CRM Developer focused on building reliable, business-driven CRM solutions.
         </motion.p>
 
         {/* Sub copy */}
@@ -207,7 +207,7 @@ export default function Hero() {
             marginBottom: '2.5rem',
           }}
         >
-          Specializing in Dataverse, customization, plug-ins, automation and integrations.
+          With 2+ years of experience, I specialize in Microsoft Dynamics 365 CRM, Dataverse architecture, C# plug-in development, business process automation, and API integrations.
         </motion.p>
 
         {/* Stats row */}

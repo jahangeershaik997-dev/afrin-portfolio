@@ -144,8 +144,8 @@ export default function Contact() {
           transition={{ delay: 0.2 }}
           style={{ fontSize: '1rem', color: '#9B9BB4', marginBottom: '3.5rem', maxWidth: '480px' }}
         >
-          Open to opportunities involving Microsoft Dynamics 365 CRM, Dataverse,
-          customization, development, automation and integrations.
+          I'm open to opportunities involving Microsoft Dynamics 365 CRM, Dataverse,
+          customization, development, automation, and integrations.
         </motion.p>
 
         <div
@@ -273,7 +273,7 @@ export default function Contact() {
                   WhatsApp opened!
                 </h3>
                 <p style={{ color: '#9B9BB4', fontSize: '0.9rem' }}>
-                  Your message is ready in WhatsApp. Press <strong>Send</strong> to deliver it to Afrin.
+                  Your message is ready in WhatsApp. Press <strong>Send</strong> to deliver it to me.
                 </p>
               </div>
             ) : (
