@@ -9,6 +9,7 @@ import Experience from './sections/Experience';
 import Projects from './sections/Projects';
 import Skills from './sections/Skills';
 import Education from './sections/Education';
+import Resume from './sections/Resume';
 import Contact from './sections/Contact';
 import './styles/global.css';
 
@@ -55,6 +56,7 @@ export default function App() {
             <Projects />
             <Skills />
             <Education />
+            <Resume />
             <Contact />
           </main>
           <Footer />

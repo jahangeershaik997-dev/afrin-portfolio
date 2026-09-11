@@ -287,8 +287,9 @@ export default function Hero() {
             Contact Me
           </a>
           <a
-            href="/Afrin_Shaik_Resume.pdf"
-            download
+            href="/resume/Afrin_Shaik_Resume.docx"
+            download="Afrin_Shaik_Resume.docx"
+            aria-label="Download Afrin Shaik's resume"
             style={{ ...outlineBtn, gap: '0.4rem' }}
           >
             <Download size={15} /> Resume

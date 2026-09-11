@@ -102,7 +102,7 @@ export default function Contact() {
               color: '#C62828',
             }}
           >
-            06 / CONTACT
+            07 / CONTACT
           </span>
         </motion.div>
 
