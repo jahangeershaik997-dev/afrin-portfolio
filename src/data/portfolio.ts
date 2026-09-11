@@ -10,7 +10,7 @@ export const profile = {
   email: 'afrinshaik847@gmail.com',
   phone: '9381742436',
   linkedin: 'https://www.linkedin.com/in/afrin-shaik-crm',
-  github: 'https://github.com/jahangeershaik997-dev/afrin-portfolio',
+  github: 'https://github.com/shaikafrin0007/afrin-portfolio',
   yearsExperience: '2+',
 };
 
@@ -326,6 +326,6 @@ export const lifecycle = [
 
 export const socialLinks = {
   linkedin: 'https://www.linkedin.com/in/afrin-shaik-crm',
-  github: 'https://github.com/jahangeershaik997-dev/afrin-portfolio',
+  github: 'https://github.com/shaikafrin0007/afrin-portfolio',
   email: 'afrinshaik847@gmail.com',
 };
