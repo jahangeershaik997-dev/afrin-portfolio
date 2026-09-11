@@ -24,8 +24,8 @@ function validate(form: FormState): FormErrors {
   if (!form.lastName.trim()) errors.lastName = 'Last name is required.';
   if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
     errors.email = 'A valid email address is required.';
-  if (!form.message.trim() || form.message.trim().length < 10)
-    errors.message = 'Message must be at least 10 characters.';
+  if (!form.message.trim())
+    errors.message = 'Message is required.';
   return errors;
 }
 
@@ -57,23 +57,37 @@ export default function Contact() {
     setErrors((prev) => ({ ...prev, [field]: newErrors[field] }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const WHATSAPP_NUMBER = '919381742436'; // +91 9381742436 — international format, no + or spaces
+
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setTouched({ firstName: true, lastName: true, email: true, message: true });
     const newErrors = validate(form);
     setErrors(newErrors);
     if (Object.keys(newErrors).length > 0) return;
 
-    setStatus('loading');
-    // Simulate sending — replace with EmailJS or similar
-    await new Promise((r) => setTimeout(r, 1500));
+    // Build the WhatsApp message text
+    const text =
+      `Hello Afrin,\n\n` +
+      `Name: ${form.firstName.trim()} ${form.lastName.trim()}\n` +
+      `Email: ${form.email.trim()}\n\n` +
+      `Message:\n${form.message.trim()}\n\n` +
+      `Sent from Afrin Shaik's portfolio.`;
+
+    // Safely encode — preserves line breaks as %0A
+    const encoded = encodeURIComponent(text);
+    const waURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
+
+    // Open WhatsApp Web / app in a new tab
+    window.open(waURL, '_blank', 'noopener,noreferrer');
+
+    // Show confirmation and reset form
     setStatus('success');
-    // Reset after success
     setTimeout(() => {
       setForm({ firstName: '', lastName: '', email: '', message: '' });
       setTouched({});
       setStatus('idle');
-    }, 4000);
+    }, 5000);
   };
 
   return (
@@ -256,10 +270,10 @@ export default function Contact() {
               >
                 <CheckCircle size={48} style={{ color: '#16A34A' }} />
                 <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.4rem', fontWeight: 700, color: '#1A1A2E' }}>
-                  Message sent!
+                  WhatsApp opened!
                 </h3>
                 <p style={{ color: '#9B9BB4', fontSize: '0.9rem' }}>
-                  Thank you for reaching out. I'll get back to you soon.
+                  Your message is ready in WhatsApp. Press <strong>Send</strong> to deliver it to Afrin.
                 </p>
               </div>
             ) : (
@@ -373,7 +387,7 @@ export default function Contact() {
                   ) : (
                     <>
                       <Send size={16} />
-                      Send Message
+                      Send via WhatsApp
                     </>
                   )}
                 </button>
